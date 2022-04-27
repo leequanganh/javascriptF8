@@ -1,0 +1,71 @@
+HTML DOM : tiêu chuẩn của w3c
+    -Document Object Model :Mô hình Đối tượng Tài liệu
+        -Element:<tag>,<h1><p>,<br>,<span>,,,
+        -Attribute(thuộc tính): class , id , src , alt , href,....,
+        -Text:<span>Text<span>
+        /---------------------/
+
+    -Node(nút):các điểm giao nhau 
+
+        /---------------------/
+    document : Document Object (nguyên cả web)
+
+        elementNode: 
+            getElementById
+            getElementsByClassname
+            getElementsByTagName
+            querySelector
+            querySelectorAll
+            HTML collections
+
+            *** từ một Node có sắn có thể lấy được các element con của nó
+                
+            *** Thêm El vào El:
+                innerHTML
+                outerHTML
+
+        AttributeNode & TextNode:
+            
+            DOM attribute:
+                -setAttribute:
+                    * el.tenAttribute='giaTriAtttribute' : set những thuộc tính hợp lệ của thẻ
+                    * el.setAttribute('tenAttribute','giaTriAtttribute'): set những thuộc tính hợp lệ và không hợp lệ
+                -getAttribute:
+                    * el.tenAttribute: lấy ra những giá trị hợp lệ của attribute 
+                    * el.getAttribute('tenAttribute') : lấy ra giá trị hợp lệ và không hợp lệ của attribute 
+
+            /-----------------------/
+
+            TextNode : <tab>tTextNodee</tag> : những thứ nằm giữa elNode
+                -get textNode :bỏ qua những thẻ <tag> và lấy ra nội dung
+                    *  elNode.innerText : trả lại những gì nhìn thấy ở brower
+                    *  elNode.textContent : trả lại textNode bên trong (những gì nhìn thấy ở IDE)
+                -set textNode
+                    * elNode.innerText='noiDungMoi'
+                    * elNode.textContent='noiDungMoi'
+
+            /--------------------/
+
+        DOM CSS
+                elNode.style.tenStyle
+                Object.assign(elNode.style, {
+                    --css--
+                })
+            
+            /-----------------/ 
+ 
+            ClassList Property
+                -add : thêm
+                -contains : kiểm tra 
+                -remove : xóa
+                -toggle : kiểm tra nếu có thì bỏ còn nếu không có thì thêm vào 
+                            
+            /----------------/
+
+        DOM events:
+            -attribute events :
+            -assgin events :
+            -preventDefault : ngăn chặn hành vi mặc định của một thẻ
+            -stopPropagation : ngăn chặn hành vi nổi bọt 
+////////////////////////////////////////////
+
